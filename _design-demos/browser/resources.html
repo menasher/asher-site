@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resources — Asher</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .r-hero {
+        padding: 56px 56px 0;
+      }
+      .r-hero h1 {
+        font-size: 84px;
+        margin: 24px 0 28px;
+        max-width: 900px;
+      }
+      .r-hero .lede {
+        font-family: var(--serif);
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        max-width: 620px;
+      }
+      .r-hero .lede em { color: var(--orange); font-style: italic; font-weight: 500; }
+
+      .r-section {
+        margin: 80px 56px 0;
+      }
+      .r-section .head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 24px;
+      }
+      .r-section .head .num-title {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+      }
+      .r-section .head .num {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--orange);
+      }
+      .r-section .head h2 {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: -0.02em;
+      }
+      .r-section .head .blurb {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 15px;
+        color: var(--mute);
+      }
+      .r-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .r-item {
+        display: grid;
+        grid-template-columns: 32px 1fr auto;
+        gap: 16px;
+        padding: 20px 24px;
+        border: 1.5px solid var(--ink);
+        border-radius: 18px;
+        box-shadow: 0 3px 0 var(--ink);
+        align-items: center;
+        background: var(--paper);
+      }
+      .r-item.t-pink { background: var(--pink-soft); }
+      .r-item.t-yellow { background: var(--yellow-soft); }
+      .r-item.t-teal { background: var(--teal-soft); }
+      .r-item.t-sky { background: var(--sky-soft); }
+      .r-item.t-olive { background: var(--olive-soft); }
+      .r-item.t-lilac { background: var(--lilac-soft); }
+      .r-item .ico {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--paper);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .r-item .name {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 1.25;
+        margin-bottom: 4px;
+      }
+      .r-item .name em {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--mute);
+        margin-left: 6px;
+      }
+      .r-item .reason {
+        font-size: 12.5px;
+        color: var(--ink-soft);
+        line-height: 1.45;
+      }
+      .r-item .link {
+        font-family: var(--hand);
+        font-size: 16px;
+        color: var(--orange);
+        transform: rotate(-3deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" style="min-height: 2300px">
+      <header class="site-header">
+        <div class="logo">
+          <div class="blob"></div>
+          <span>asher<span class="wave">!</span></span>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a class="active" href="./resources.html">Resources</a></li>
+            <li><a href="./contact.html">Say hi</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="r-hero">
+        <div class="greeting">resources ✿ a small collection</div>
+        <h1 class="h-display">
+          Things I <span class="underline">read,</span><br />
+          use, and <span class="y-mark">recommend.</span>
+        </h1>
+        <p class="lede">
+          A working list of the tools, books, and people that have shaped how I
+          think. <em>Updated when something earns it.</em>
+        </p>
+      </section>
+
+      <section class="r-section">
+        <div class="head">
+          <div class="num-title">
+            <span class="num">01.</span>
+            <h2>Tools</h2>
+          </div>
+          <div class="blurb">— things I&apos;d genuinely have a worse day without</div>
+        </div>
+        <div class="r-grid">
+          <div class="r-item t-pink">
+            <div class="ico">L</div>
+            <div>
+              <div class="name">Linear <em>project management</em></div>
+              <div class="reason">Respects keyboard users. Pricing got worse, value still high.</div>
+            </div>
+            <span class="link">linear.app ↗</span>
+          </div>
+          <div class="r-item t-yellow">
+            <div class="ico">C</div>
+            <div>
+              <div class="name">Cursor <em>code editor</em></div>
+              <div class="reason">Where most of my code now happens. AI is genuinely useful.</div>
+            </div>
+            <span class="link">cursor.com ↗</span>
+          </div>
+          <div class="r-item t-teal">
+            <div class="ico">F</div>
+            <div>
+              <div class="name">Figma <em>design</em></div>
+              <div class="reason">Still no real competitor. Even dev mode has earned its place.</div>
+            </div>
+            <span class="link">figma.com ↗</span>
+          </div>
+          <div class="r-item t-sky">
+            <div class="ico">V</div>
+            <div>
+              <div class="name">Velite <em>content layer</em></div>
+              <div class="reason">Type-safe MDX without the Contentlayer drama. Powers this site.</div>
+            </div>
+            <span class="link">velite.js.org ↗</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <div class="head">
+          <div class="num-title">
+            <span class="num">02.</span>
+            <h2>Books</h2>
+          </div>
+          <div class="blurb">— books I return to, not ones I finished first</div>
+        </div>
+        <div class="r-grid">
+          <div class="r-item t-olive">
+            <div class="ico">W</div>
+            <div>
+              <div class="name"><em>White</em> &nbsp;by Kenya Hara</div>
+              <div class="reason">The clearest argument for restraint I&apos;ve ever read.</div>
+            </div>
+            <span class="link">muji books ↗</span>
+          </div>
+          <div class="r-item t-lilac">
+            <div class="ico">G</div>
+            <div>
+              <div class="name"><em>Grid Systems</em> &nbsp;by Müller-Brockmann</div>
+              <div class="reason">The bible. Skip the rhetoric, study the diagrams.</div>
+            </div>
+            <span class="link">niggli press ↗</span>
+          </div>
+          <div class="r-item t-pink">
+            <div class="ico">R</div>
+            <div>
+              <div class="name"><em>Refactoring UI</em> &nbsp;by Wathan &amp; Schoger</div>
+              <div class="reason">Practical, no-nonsense. For engineers who design.</div>
+            </div>
+            <span class="link">refactoringui.com ↗</span>
+          </div>
+          <div class="r-item t-yellow">
+            <div class="ico">P</div>
+            <div>
+              <div class="name"><em>A Pattern Language</em> &nbsp;by Alexander</div>
+              <div class="reason">About buildings, but about everything. Read slowly.</div>
+            </div>
+            <span class="link">oxford press ↗</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="r-section">
+        <div class="head">
+          <div class="num-title">
+            <span class="num">03.</span>
+            <h2>Essays &amp; people</h2>
+          </div>
+          <div class="blurb">— bookmarked, re-read, recommended at dinner</div>
+        </div>
+        <div class="r-grid">
+          <div class="r-item t-sky">
+            <div class="ico">↻</div>
+            <div>
+              <div class="name">Worse Is Better <em>by Richard P. Gabriel</em></div>
+              <div class="reason">The original case for shipping. Still painful, still right.</div>
+            </div>
+            <span class="link">dreamsongs ↗</span>
+          </div>
+          <div class="r-item t-teal">
+            <div class="ico">⌘</div>
+            <div>
+              <div class="name">Why Generative Art Is Hard <em>by Tyler Hobbs</em></div>
+              <div class="reason">A working artist&apos;s honest accounting.</div>
+            </div>
+            <span class="link">tylerxhobbs ↗</span>
+          </div>
+          <div class="r-item t-pink">
+            <div class="ico">★</div>
+            <div>
+              <div class="name">Rauno Freiberg <em>designer, Vercel</em></div>
+              <div class="reason">For the experimental hero, the precise interaction.</div>
+            </div>
+            <span class="link">rauno.me ↗</span>
+          </div>
+          <div class="r-item t-olive">
+            <div class="ico">○</div>
+            <div>
+              <div class="name">Kenya Hara <em>art director, MUJI</em></div>
+              <div class="reason">Restraint as philosophy, not as a lack of effort.</div>
+            </div>
+            <span class="link">ndc.co.jp ↗</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer">
+        <div>built with care · shanghai · 2026</div>
+        <div class="smile">— recommendations welcome ✿</div>
+      </div>
+    </div>
+  </body>
+</html>

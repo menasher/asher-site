@@ -1,0 +1,329 @@
+{
+  "site": {
+    "name": "Asher",
+    "title": "Asher — small, honest things for the web",
+    "description": "Personal site of Asher. Designer & engineer based in Shanghai. Projects, writing, and notes on design and engineering."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "resources": "Resources",
+    "contact": "Say hi"
+  },
+  "footer": {
+    "built": "built with care · shanghai · {year}",
+    "seeYou": "see you around ✿"
+  },
+  "langSwitch": {
+    "label": "Language",
+    "zh": "中文",
+    "en": "English"
+  },
+  "common": {
+    "all": "All",
+    "back": "Back",
+    "viewAll": "View all",
+    "readMore": "Keep reading",
+    "minRead": "{min} min",
+    "fresh": "{count} fresh",
+    "of": "{a} of {b}",
+    "filter": "Filter"
+  },
+  "home": {
+    "greeting": "hi there ✿ welcome in",
+    "headline1": "I make",
+    "headlineSmall": "small,",
+    "headlineHonest": "honest",
+    "headlineThings": "things",
+    "headlineForWeb": "for the web",
+    "introBold": "Designer & engineer",
+    "introTail": ", based in Shanghai. I keep this corner of the internet as a journal — projects, half-thoughts, and the occasional rant.",
+    "ctaWork": "See my work",
+    "ctaBlog": "Read the blog",
+    "nowStatus": "now — shipping personal-site v2 & rewriting the about page (again)",
+    "bento": {
+      "portfolioLabel": "Portfolio",
+      "portfolioTitle": "Things I've made.",
+      "portfolioDesc": "Twelve projects, mostly web & mobile. Some are products, some are essays that happen to ship as code.",
+      "portfolioFresh": "{count} fresh",
+      "blogLabel": "Blog · {count} entries",
+      "blogTitle": "Journal & rants",
+      "blogDesc": "On building this site, why I dropped Contentlayer, one opinion about icon buttons.",
+      "aboutLabel": "About",
+      "aboutTitle": "Hello, I'm Asher.",
+      "aboutDesc": "Ten years of designing and shipping things. Currently independent, occasionally open to work.",
+      "resourcesLabel": "Resources",
+      "resourcesTitle": "Tools I share",
+      "resourcesDesc": "Linear, Cursor, Figma — and a small list of books I actually re-read.",
+      "contactLabel": "Say hi",
+      "contactTitle": "Drop a line",
+      "contactCadence": "replies in ~24h"
+    }
+  },
+  "about": {
+    "metaTitle": "About",
+    "metaDescription": "About Asher",
+    "greeting": "about me ✿ in a few words",
+    "headlinePart1": "I",
+    "headlineDesign": "design + build",
+    "headlineSmall": "small",
+    "headlineCareful": "careful",
+    "headlineThings": " things.",
+    "lede": "Hello. I'm Asher — a designer and engineer based in Shanghai. I've spent the last decade quietly making things for the web; this is where I keep notes about ",
+    "ledeEm": "what I'm learning",
+    "ledeTail": ".",
+    "avatarRole": "designer + engineer · Shanghai",
+    "avatarTags": ["Web", "iOS", "Brand"],
+    "longerNote": "a longer\nnote ↘",
+    "longerBody1": "I came to this work through writing first. Long before I knew what ",
+    "longerKerning": "kerning",
+    "longerBody2": " meant or could spell ",
+    "longerTs": "TypeScript",
+    "longerBody3": ", I was obsessing over which paragraph break felt right. The instincts stayed; the medium just shifted.",
+    "longerBody4": "These days I split my time between client engagements (mostly design systems and small product surfaces) and self-initiated work that lives here. I prefer projects where I can do both the design and the engineering — the seam between the two is where the interesting decisions hide.",
+    "timelineHead": "Where I've been",
+    "timelineHand": "— a ledger",
+    "timelineMeta": "a short stack",
+    "valuesHead": "What I care about",
+    "valuesHand": "— small dogmas",
+    "timeline": [
+      {
+        "when": "2024 — now",
+        "role": "Independent",
+        "where": "design + engineering, mostly client work",
+        "note": "Design systems, product surfaces, the occasional brand audit. Recent partners: two startups and a public cultural institution."
+      },
+      {
+        "when": "2021 — 24",
+        "role": "Senior Product Designer",
+        "where": "Series-B fintech",
+        "note": "Led the design system rebuild. Shipped the consumer iOS app from v1 to v3."
+      },
+      {
+        "when": "2017 — 21",
+        "role": "Product Designer",
+        "where": "B2B SaaS",
+        "note": "Owned dashboards and the data-export pipeline. Wrote a lot of CSS."
+      },
+      {
+        "when": "2014 — 17",
+        "role": "Various",
+        "where": "freelance, a design school, one bad agency",
+        "note": "The years I learned what I never wanted to do again."
+      }
+    ],
+    "values": [
+      {
+        "n": "01.",
+        "title": "Honest placeholders.",
+        "body": "A grey block with a label is *more useful* than a fake chart. Pretend less."
+      },
+      {
+        "n": "02.",
+        "title": "One detail at 120%.",
+        "body": "*Everything else at 80%.* Taste is knowing where to spend the effort."
+      },
+      {
+        "n": "03.",
+        "title": "Static beats dynamic.",
+        "body": "Until proven otherwise. *Most pages* don't need to be interactive."
+      },
+      {
+        "n": "04.",
+        "title": "Done is a feature.",
+        "body": "*Ship the small thing.* Then ship the next one."
+      }
+    ],
+    "ctaSentence": "Currently open to new projects. Drop a note via ",
+    "ctaLink": "the contact page",
+    "ctaTail": " if we should talk."
+  },
+  "portfolio": {
+    "metaTitle": "Portfolio",
+    "metaDescription": "A small catalogue of things I've made.",
+    "greeting": "portfolio ✿ 2014—2026",
+    "headline1": "A small",
+    "headlineCatalogue": "catalogue",
+    "headlineOf": "of things",
+    "headlineMade": "I've made.",
+    "lede": "{count} projects, organised ",
+    "ledeEm": "most-recent first",
+    "ledeTail": ". Some are products, some are design systems, some are essays that happen to ship as code.",
+    "filterLabel": "Filter",
+    "filterAll": "All",
+    "filterCount": "{n} of {total} projects",
+    "kinds": {
+      "Web": "Web",
+      "App": "App",
+      "Brand & System": "Brand & System",
+      "Writing": "Writing"
+    },
+    "current": "Current",
+    "archive": "More in the archive",
+    "archiveHand": "— ask me about them ↘",
+    "ctaContact": "Get in touch →"
+  },
+  "blog": {
+    "metaTitle": "Blog",
+    "metaDescription": "Journal & rants — on design, engineering, and the in-between.",
+    "greeting": "blog ✿ {count} entries & counting",
+    "headline1": "Journal",
+    "headlineRants": "& rants.",
+    "lede": "Notes on design, engineering, and ",
+    "ledeEm": "the in-between",
+    "ledeTail": ". Mostly short, occasionally long, always rewritten three times before they land here.",
+    "filterAll": "All",
+    "rssHand": "→ RSS feed",
+    "featured": "★ Featured",
+    "readIt": "Read it",
+    "freshlyBaked": "freshly baked ↗",
+    "fromThePost": "— from the post",
+    "emptyTitle": "Nothing in this category yet.",
+    "emptyBody": "Try ",
+    "emptyLink": "all entries",
+    "emptyTail": " or check back soon."
+  },
+  "post": {
+    "featured": "★ Featured",
+    "byline": "Byline",
+    "tagged": "Tagged",
+    "wordsAt": "{min} min at 200 wpm",
+    "postedBy": "Posted by",
+    "contentsHand": "contents ↘",
+    "noContents": "(one continuous read)",
+    "nextPostHand": "next post ↘",
+    "keepReading": "Keep reading",
+    "marginPullAttribution": "— a personal motto"
+  },
+  "project": {
+    "allProjects": "← All projects",
+    "featured": "★ Featured",
+    "visit": "Visit",
+    "source": "Source",
+    "onTheBench": "On the bench ↘",
+    "onTheBenchBody": "Case studies are short on purpose. Want the long version? Email me — I'll tell you what didn't work, too.",
+    "kind": "Kind",
+    "role": "Role",
+    "year": "Year"
+  },
+  "resources": {
+    "metaTitle": "Resources",
+    "metaDescription": "Things I read, use, and quietly recommend.",
+    "greeting": "resources ✿ a small collection",
+    "headline1": "Things I",
+    "headlineRead": "read,",
+    "headlineUseRec": "use, and",
+    "headlineRecommend": "recommend",
+    "headlineThe": ".",
+    "lede": "A working list of the tools, books, and people that have shaped how I think.",
+    "ledeEm": " Updated when something earns it.",
+    "sectionTools": "Tools",
+    "sectionToolsBlurb": "things I'd genuinely have a worse day without",
+    "sectionBooks": "Books",
+    "sectionBooksBlurb": "books I return to, not ones I finished first",
+    "sectionEssays": "Essays & people",
+    "sectionEssaysBlurb": "bookmarked, re-read, recommended at dinner",
+    "tools": [
+      {
+        "name": "Linear",
+        "kicker": "project management",
+        "reason": "Respects keyboard users. Pricing got worse, value still high."
+      },
+      {
+        "name": "Cursor",
+        "kicker": "code editor",
+        "reason": "Where most of my code now happens. The AI is genuinely useful; the UI doesn't get in the way."
+      },
+      {
+        "name": "Figma",
+        "kicker": "design",
+        "reason": "Still no real competitor. Even dev mode has earned its place."
+      },
+      {
+        "name": "Velite",
+        "kicker": "content layer",
+        "reason": "Type-safe MDX without the Contentlayer drama. Powers this site."
+      }
+    ],
+    "books": [
+      {
+        "name": "White",
+        "kicker": "by Kenya Hara",
+        "reason": "The clearest argument for restraint I've ever read. Read it slowly; it's 100 pages and you'll need them."
+      },
+      {
+        "name": "Grid Systems",
+        "kicker": "by Müller-Brockmann",
+        "reason": "The bible. Skip the rhetoric, study the diagrams."
+      },
+      {
+        "name": "Refactoring UI",
+        "kicker": "by Wathan & Schoger",
+        "reason": "Practical, mid-career, no-nonsense. Recommended for engineers who design."
+      },
+      {
+        "name": "A Pattern Language",
+        "kicker": "by Christopher Alexander",
+        "reason": "About buildings, but about everything. Architects, designers, town planners — pay attention."
+      }
+    ],
+    "essays": [
+      {
+        "name": "Worse Is Better",
+        "kicker": "by Richard P. Gabriel",
+        "reason": "The original case for shipping. Still painful, still right."
+      },
+      {
+        "name": "Why Generative Art Is Hard",
+        "kicker": "by Tyler Hobbs",
+        "reason": "A working artist's honest accounting of why this looks easy and isn't."
+      },
+      {
+        "name": "Rauno Freiberg",
+        "kicker": "designer, Vercel",
+        "reason": "For the experimental hero, the precise interaction, the designer-to-designer wink."
+      },
+      {
+        "name": "Kenya Hara",
+        "kicker": "art director, MUJI",
+        "reason": "The case study for restraint as a design philosophy, not a lack of effort."
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "Say hi",
+    "metaDescription": "Get in touch with Asher",
+    "greeting": "contact ✿ the door's always open",
+    "headline1": "Drop me",
+    "headlineLine": "a line.",
+    "lede": "I read everything. The ",
+    "ledeEm": "fastest way",
+    "ledeTail": " to reach me is email — the rest are slower channels I check less reverently.",
+    "primary": "★ primary",
+    "email": "Email",
+    "emailBody": "The main channel. Use a clear subject line and I'll usually reply within a working day. ",
+    "emailBodyEm": "Long emails welcome.",
+    "emailCadence": "reply in ~24h",
+    "twitter": "Twitter / X",
+    "twitterBody": "For the half-formed thought and the occasional design rant. ",
+    "twitterBodyEm": "DMs open",
+    "twitterTail": " but I'm slow.",
+    "twitterCadence": "replies vary",
+    "github": "GitHub",
+    "githubBody": "Where most of the code lives. ",
+    "githubBodyEm": "Issues and PRs",
+    "githubTail": " are the love language of open source.",
+    "githubCadence": "~2 days",
+    "linkedin": "LinkedIn",
+    "linkedinBody": "For the kind of message that probably should be an email. I check it on ",
+    "linkedinBodyEm": "Wednesdays",
+    "linkedinTail": ".",
+    "linkedinCadence": "weekly",
+    "promiseHand": "a small promise ↘",
+    "promise1": "If you write, ",
+    "promiseEm": "I write back.",
+    "promise2": " It might take a day, sometimes a week. But the inbox is never the void, and the door is never closed."
+  }
+}

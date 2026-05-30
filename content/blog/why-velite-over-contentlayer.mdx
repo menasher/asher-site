@@ -1,0 +1,39 @@
+---
+title: Why Velite over Contentlayer
+description: Notes on type-safe MDX content layers in Next.js 16 — what broke, what surprised me, what I'm keeping.
+date: 2026-05-18
+category: 技术文章
+tags:
+  - velite
+  - mdx
+  - nextjs
+published: true
+readingMinutes: 6
+---
+
+## The short answer
+
+Contentlayer&apos;s upstream got quiet, and the maintainer rewrote the
+philosophy as **Velite**. Smaller dependency footprint, faster builds,
+identical-feeling DX.
+
+## What changed in my setup
+
+- `velite.config.ts` replaces `contentlayer.config.ts` — schema syntax is
+  Zod-flavoured, basically the same shape
+- The build output goes to `.velite/` instead of `.contentlayer/`
+- I run it as a `predev` / `prebuild` step rather than via webpack plugin
+
+## What surprised me
+
+`s.path()` returns the file path relative to the `root`, which means slug
+generation is a one-liner. Used to be three lines of regex.
+
+The `.transform()` hook lets me add computed fields without leaving the
+schema — which is where I add `slugAsParams` and any post-processing.
+
+## What I&apos;m keeping
+
+The MDX rendering pattern. I wrote a tiny `useMDXComponent` hook that
+evaluates the compiled code at runtime with `react/jsx-runtime`. It&apos;s 12
+lines and replaces an entire package.

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo C · Rauno Experimental</title>
+    <style>
+      :root {
+        --bg: #050505;
+        --ink: #ededed;
+        --mute: #6b6b6b;
+        --line: #1f1f1f;
+        --accent: #d4ff3a;
+        --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+        --sans: -apple-system, "SF Pro Display", "Helvetica Neue", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+      .page {
+        width: 1280px;
+        min-height: 1600px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* GRAIN */
+      .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.25;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+      }
+
+      /* HEADER */
+      header {
+        position: relative;
+        padding: 24px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .logotype {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logotype .blip {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 12px var(--accent);
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 28px;
+      }
+      nav a {
+        color: var(--mute);
+        text-decoration: none;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        text-transform: lowercase;
+      }
+      nav a.active {
+        color: var(--ink);
+      }
+      nav a.active::before {
+        content: "●";
+        color: var(--accent);
+        margin-right: 6px;
+        font-size: 8px;
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        padding: 0 40px;
+        height: 880px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hero .megatype {
+        font-family: var(--sans);
+        font-weight: 700;
+        font-size: 320px;
+        line-height: 0.82;
+        letter-spacing: -0.06em;
+        margin-left: -16px;
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(
+          180deg,
+          #fff 0%,
+          #fff 60%,
+          #888 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero .megatype .sub {
+        font-family: var(--mono);
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: var(--mute);
+        background: none;
+        -webkit-text-fill-color: var(--mute);
+        position: absolute;
+        bottom: 26px;
+        right: 24px;
+        display: inline-block;
+        max-width: 280px;
+        line-height: 1.5;
+        text-align: right;
+      }
+      .hero .orb {
+        position: absolute;
+        right: 80px;
+        top: 60px;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 30% 30%, #f0f0f0 0%, #d4ff3a 18%, #66cc11 40%, #1e3a09 75%, #050505 100%);
+        filter: blur(0.5px);
+        box-shadow:
+          0 0 80px rgba(212, 255, 58, 0.25),
+          inset -40px -40px 80px rgba(0, 0, 0, 0.55);
+        z-index: 1;
+      }
+      .hero .orb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>");
+        opacity: 0.4;
+        mix-blend-mode: overlay;
+      }
+      .hero .meta-row {
+        position: absolute;
+        bottom: 32px;
+        left: 40px;
+        right: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        color: var(--mute);
+      }
+      .hero .meta-row .now {
+        color: var(--accent);
+      }
+
+      /* WORK */
+      .work {
+        position: relative;
+        padding: 80px 40px 80px;
+        border-top: 1px solid var(--line);
+      }
+      .work .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 40px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--mute);
+      }
+      .work .head .title {
+        color: var(--ink);
+      }
+      .work ul {
+        list-style: none;
+      }
+      .work li {
+        display: grid;
+        grid-template-columns: 40px 1fr 200px 80px 24px;
+        gap: 24px;
+        padding: 26px 0;
+        border-top: 1px solid var(--line);
+        align-items: baseline;
+      }
+      .work li:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .work li .num {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--mute);
+      }
+      .work li .name {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: -0.015em;
+        line-height: 1.1;
+        color: var(--ink);
+      }
+      .work li .desc {
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--mute);
+        line-height: 1.55;
+      }
+      .work li .tag {
+        font-family: var(--mono);
+        font-size: 11px;
+        text-transform: lowercase;
+        color: var(--mute);
+      }
+      .work li .arrow {
+        font-family: var(--mono);
+        color: var(--mute);
+        text-align: right;
+      }
+      .work li.is-hover {
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(212, 255, 58, 0.04) 50%,
+          transparent 100%
+        );
+      }
+      .work li.is-hover .name {
+        color: var(--accent);
+      }
+      .work li.is-hover .arrow {
+        color: var(--accent);
+      }
+
+      /* FOOTNOTE */
+      .footnote {
+        padding: 24px 40px;
+        font-family: var(--mono);
+        font-size: 11px;
+        color: var(--mute);
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        letter-spacing: 0.04em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="grain"></div>
+
+      <header>
+        <div class="logotype">
+          <span class="blip"></span>
+          asher / v2026.05
+        </div>
+        <nav>
+          <ul>
+            <li><a class="active" href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">resources</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="orb"></div>
+        <div class="megatype">
+          ASHER<span class="sub">designer / engineer<br />et al. building<br />small experiments<br />for the web</span>
+        </div>
+        <div class="meta-row">
+          <span>Lat 31.23 / Long 121.47 · Shanghai</span>
+          <span class="now">● now: shipping personal-site v2</span>
+          <span>local time 14:56 UTC+8</span>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="head">
+          <span class="title">/portfolio · selected</span>
+          <span>03 / 12 ↓</span>
+        </div>
+        <ul>
+          <li class="is-hover">
+            <div class="num">01</div>
+            <div class="name">Personal Site v2</div>
+            <div class="desc">next.js 16 · mdx · static · 1s ttfb</div>
+            <div class="tag">web / self</div>
+            <div class="arrow">↗</div>
+          </li>
+          <li>
+            <div class="num">02</div>
+            <div class="name">Sleek</div>
+            <div class="desc">ios productivity · solo · 4.8 ⭐ · 12k users</div>
+            <div class="tag">app / client</div>
+            <div class="arrow">↗</div>
+          </li>
+          <li>
+            <div class="num">03</div>
+            <div class="name">Tokens, Reconciled</div>
+            <div class="desc">figma ↔ code · 240 tokens · −47% ui bugs</div>
+            <div class="tag">brand / contract</div>
+            <div class="arrow">↗</div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="footnote">
+        <div>made in shanghai · pinging vercel.com · build #00132</div>
+        <div>view all 12 projects ↓</div>
+      </div>
+    </div>
+  </body>
+</html>

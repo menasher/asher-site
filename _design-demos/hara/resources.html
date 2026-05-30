@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resources · Asher</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .res-hero {
+        padding: 180px var(--pad-x) 0;
+      }
+      .res-hero h1 {
+        font-size: 64px;
+        line-height: 1.1;
+        margin-bottom: 32px;
+        max-width: 760px;
+      }
+      .res-hero .lede {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 19px;
+        line-height: 1.6;
+        color: var(--ink-soft);
+        max-width: 580px;
+      }
+      .res-section {
+        padding: 0 var(--pad-x);
+        margin-top: 120px;
+      }
+      .res-section .head {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 64px;
+        align-items: baseline;
+        padding-bottom: 32px;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 32px;
+      }
+      .res-section .head .label {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .res-section .head .blurb {
+        font-family: var(--serif);
+        font-size: 17px;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        max-width: 620px;
+      }
+      .res-list {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 64px;
+        margin-bottom: 32px;
+      }
+      .res-list .spacer {}
+      .res-list ul {
+        list-style: none;
+      }
+      .res-list li {
+        display: grid;
+        grid-template-columns: 220px 1fr 80px;
+        gap: 32px;
+        padding: 20px 0;
+        border-bottom: 1px dotted var(--rule);
+        align-items: baseline;
+      }
+      .res-list li:last-child { border-bottom: 1px solid var(--rule); }
+      .res-list .name {
+        font-family: var(--serif);
+        font-size: 20px;
+        color: var(--ink);
+        line-height: 1.3;
+      }
+      .res-list .name em {
+        font-style: italic;
+        color: var(--mute);
+        font-size: 14px;
+        margin-left: 6px;
+      }
+      .res-list .reason {
+        font-family: var(--sans);
+        font-size: 13px;
+        line-height: 1.55;
+        color: var(--ink-soft);
+        max-width: 540px;
+      }
+      .res-list .link {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 13px;
+        color: var(--mute);
+        text-align: right;
+      }
+      .res-list .link::after {
+        content: " ↗";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" style="min-height: 2400px">
+      <header class="site-header">
+        <div class="logotype">asher <span class="dot"></span> <em>journal</em></div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a class="active" href="./resources.html">Resources</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="res-hero">
+        <div class="eyebrow">Resources &nbsp;·&nbsp; small collection</div>
+        <h1 class="h-display">
+          Things I read,<br />
+          use, and quietly recommend.
+        </h1>
+        <p class="lede">
+          A working list of the tools, books, and people that have shaped how I
+          think about this work. Updated when something earns it.
+        </p>
+      </section>
+
+      <section class="res-section">
+        <div class="head">
+          <div class="label">i. Tools</div>
+          <div class="blurb">
+            The short list — things I&apos;d genuinely have a worse day without.
+          </div>
+        </div>
+        <div class="res-list">
+          <div class="spacer"></div>
+          <ul>
+            <li>
+              <div class="name">Linear <em>project management</em></div>
+              <div class="reason">
+                The only PM tool that respects keyboard users. Pricing got
+                worse, value still high.
+              </div>
+              <div class="link">linear.app</div>
+            </li>
+            <li>
+              <div class="name">Cursor <em>code editor</em></div>
+              <div class="reason">
+                Where most of my code now happens. The AI is genuinely useful;
+                the UI doesn&apos;t get in the way.
+              </div>
+              <div class="link">cursor.com</div>
+            </li>
+            <li>
+              <div class="name">Figma <em>design</em></div>
+              <div class="reason">
+                Still no real competitor. Even the dev mode has earned its place.
+              </div>
+              <div class="link">figma.com</div>
+            </li>
+            <li>
+              <div class="name">Velite <em>content layer</em></div>
+              <div class="reason">
+                Type-safe MDX without the Contentlayer drama. Powers this site.
+              </div>
+              <div class="link">velite.js.org</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="res-section">
+        <div class="head">
+          <div class="label">ii. Books</div>
+          <div class="blurb">
+            Books I return to, not the ones I finished first.
+          </div>
+        </div>
+        <div class="res-list">
+          <div class="spacer"></div>
+          <ul>
+            <li>
+              <div class="name"><em>White</em> &nbsp;by Kenya Hara</div>
+              <div class="reason">
+                The clearest argument for restraint I&apos;ve ever read. Read it
+                slowly; it&apos;s 100 pages and you&apos;ll need them.
+              </div>
+              <div class="link">muji books</div>
+            </li>
+            <li>
+              <div class="name"><em>Grid Systems</em> &nbsp;by Müller-Brockmann</div>
+              <div class="reason">
+                The bible. Skip the rhetoric, study the diagrams.
+              </div>
+              <div class="link">niggli press</div>
+            </li>
+            <li>
+              <div class="name"><em>Refactoring UI</em> &nbsp;by Adam Wathan &amp; Steve Schoger</div>
+              <div class="reason">
+                Practical, mid-career, no-nonsense. Recommended for engineers
+                who design.
+              </div>
+              <div class="link">refactoringui.com</div>
+            </li>
+            <li>
+              <div class="name"><em>A Pattern Language</em> &nbsp;by Christopher Alexander</div>
+              <div class="reason">
+                About buildings, but about everything. Architects, designers,
+                and town planners pay attention.
+              </div>
+              <div class="link">oxford press</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="res-section">
+        <div class="head">
+          <div class="label">iii. Essays</div>
+          <div class="blurb">
+            Bookmarked, re-read, and recommended at dinner parties.
+          </div>
+        </div>
+        <div class="res-list">
+          <div class="spacer"></div>
+          <ul>
+            <li>
+              <div class="name">Worse Is Better &nbsp;<em>by Richard P. Gabriel</em></div>
+              <div class="reason">
+                The original case for shipping. Still painful, still right.
+              </div>
+              <div class="link">dreamsongs.com</div>
+            </li>
+            <li>
+              <div class="name">Why Generative Art Is Hard &nbsp;<em>by Tyler Hobbs</em></div>
+              <div class="reason">
+                A working artist&apos;s honest accounting of why this looks easy
+                and isn&apos;t.
+              </div>
+              <div class="link">tylerxhobbs.com</div>
+            </li>
+            <li>
+              <div class="name">The Pixar Theory of Animation &nbsp;<em>by Glen Keane</em></div>
+              <div class="reason">
+                Best 12 minutes on motion design I&apos;ve found.
+              </div>
+              <div class="link">vimeo</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="res-section" style="margin-bottom: 120px">
+        <div class="head">
+          <div class="label">iv. People</div>
+          <div class="blurb">
+            Whose work I quietly study. Most are still working.
+          </div>
+        </div>
+        <div class="res-list">
+          <div class="spacer"></div>
+          <ul>
+            <li>
+              <div class="name">Rauno Freiberg &nbsp;<em>designer, Vercel</em></div>
+              <div class="reason">
+                For the experimental hero, the precise interaction, the
+                designer-to-designer wink.
+              </div>
+              <div class="link">rauno.me</div>
+            </li>
+            <li>
+              <div class="name">Massimo Vignelli &nbsp;<em>1931 — 2014</em></div>
+              <div class="reason">
+                The voice in my head when I&apos;m being lazy about the grid.
+              </div>
+              <div class="link">vignelli.com</div>
+            </li>
+            <li>
+              <div class="name">Kenya Hara &nbsp;<em>art director, MUJI</em></div>
+              <div class="reason">
+                The case study for restraint as a design philosophy, not a
+                lack of effort.
+              </div>
+              <div class="link">ndc.co.jp</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="site-footer">
+        <div>asher · est. 2026 · Shanghai</div>
+        <em>—— a quiet practice</em>
+      </div>
+    </div>
+  </body>
+</html>

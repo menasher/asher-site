@@ -1,0 +1,302 @@
+/* ───────────────────────────────────────────────────────────
+   Asher · Hara-inspired design system
+   米白宣纸底 + 衬线 display + 大留白 + 1px 细线
+   ─────────────────────────────────────────────────────────── */
+
+:root {
+  --bg: #fafaf7;
+  --bg-deep: #f3f1ea;
+  --ink: #1a1a1a;
+  --ink-soft: #3a3a38;
+  --mute: #8a8a85;
+  --mute-soft: #b8b6ad;
+  --rule: #d8d6cf;
+  --rule-soft: #e8e6df;
+  --accent: #8b3a1f;
+  --accent-soft: #b85a3a;
+
+  --serif: "New York", "Iowan Old Style", "Source Serif Pro", "Georgia", serif;
+  --sans: -apple-system, "SF Pro Text", "Helvetica Neue", "Inter", sans-serif;
+
+  --pad-x: 96px;
+  --pad-y: 56px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  font-variant-ligatures: common-ligatures;
+}
+
+.page {
+  width: 1280px;
+  min-height: 1600px;
+  position: relative;
+}
+
+/* ─── HEADER ─────────────────────────────────────────── */
+.site-header {
+  padding: 56px var(--pad-x) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.logotype {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.logotype .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+.logotype em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+.site-nav a {
+  color: var(--mute);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+.site-nav a:hover { color: var(--ink); }
+.site-nav a.active { color: var(--ink); }
+
+/* ─── HERO COMMON ─────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 48px;
+}
+
+.h-display {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+}
+.h-display em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ─── STAMP (阿字方印) ────────────────────────────────── */
+.stamp {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--accent);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--accent);
+}
+.stamp.sm {
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+}
+
+/* ─── SECTION COMMON ──────────────────────────────────── */
+.section {
+  padding: 0 var(--pad-x);
+  margin-top: 120px;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 56px;
+}
+.section-head h2 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+}
+.section-head .index {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* ─── DIVIDER ─────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 0 var(--pad-x);
+}
+.divider-tick {
+  height: 96px;
+  margin: 0 var(--pad-x);
+  position: relative;
+}
+.divider-tick::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 96px;
+  background: var(--rule);
+}
+
+/* ─── ROW LIST (used by portfolio, blog, resources) ──── */
+.row-list {
+  list-style: none;
+}
+.row-list li {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 80px;
+  gap: 32px;
+  padding: 36px 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+.row-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.row-list .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--mute);
+}
+.row-list .title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.row-list .title {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.row-list .desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--mute);
+  max-width: 560px;
+}
+.row-list .cat {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.row-list .year {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--mute);
+  text-align: right;
+}
+
+/* ─── FOOTER ──────────────────────────────────────────── */
+.site-footer {
+  position: absolute;
+  bottom: 56px;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+}
+.site-footer em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12px;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+/* ─── TYPOGRAPHY HELPERS ───────────────────────────────── */
+.t-italic { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.t-serif { font-family: var(--serif); font-weight: 400; }
+.t-mute { color: var(--mute); }
+.t-ink { color: var(--ink); }
+.t-accent { color: var(--accent); }
+.t-small-caps {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* ─── PROSE (article body) ──────────────────────────── */
+.prose {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 640px;
+}
+.prose p { margin-bottom: 1.4em; }
+.prose p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 3.6em;
+  float: left;
+  line-height: 0.95;
+  padding: 0.05em 0.08em 0 0;
+  color: var(--accent);
+}
+.prose em { font-style: italic; color: var(--accent); }
+.prose blockquote {
+  font-style: italic;
+  border-left: 1px solid var(--rule);
+  padding-left: 24px;
+  margin: 1.6em 0;
+  color: var(--mute);
+}
+.prose h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 2em 0 0.8em;
+  color: var(--ink);
+}
+.prose ul, .prose ol {
+  margin: 1.2em 0 1.4em 1.4em;
+}
+.prose li { margin: 0.4em 0; }

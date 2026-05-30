@@ -1,0 +1,42 @@
+---
+title: The death of the icon button
+description: Hot take — most icon-only buttons are accessibility footguns and taste-laundering. Here's when they earn their place.
+date: 2026-04-24
+category: 行业观察
+tags:
+  - ux
+  - accessibility
+published: true
+readingMinutes: 7
+---
+
+## The pattern
+
+A square. An icon. No label. You hover and *maybe* a tooltip appears after
+600ms. You tap on mobile and the tooltip never appears because there is no
+hover state.
+
+This is the most overused control in modern UI. We use it because it&apos;s
+visually quiet — and that&apos;s exactly why it&apos;s misused.
+
+## What it costs
+
+- **Accessibility**: screen readers fall back to `aria-label`, which is
+  rarely good
+- **Mobile**: no hover, no tooltip, no label, no learnability
+- **Localisation**: an icon means nothing if your audience doesn&apos;t share
+  the visual idiom
+
+## When it earns its place
+
+- The icon is overwhelmingly conventional (✕ for close, 🔍 for search, ⚙ for settings)
+- The control appears in a context that already explains it (close on a modal)
+- There&apos;s a visible label nearby that pairs with it
+
+## What I do instead
+
+Most of the time? **Label + icon**, like every text-heavy interface from
+1995. Put the verb on the button. Save the icon-only treatment for the
+five conventional cases.
+
+There&apos;s nothing brave about being illegible.

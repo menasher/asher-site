@@ -1,0 +1,214 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ───────────────────────────────────────────────────────────
+   Asher · Browser-Company-inspired design system
+   Warm cream paper + 1.5px ink stroke + solid box-shadow + rounded cards
+   ─────────────────────────────────────────────────────────── */
+
+:root {
+  /* paper */
+  --bg: #fff8ee;
+  --bg-2: #ffe7c8;
+  --paper: #ffffff;
+  --paper-cream: #fffdf8;
+
+  /* ink */
+  --ink: #1f1a14;
+  --ink-soft: #4a3f2e;
+  --mute: #8b7c61;
+  --mute-soft: #b8a98b;
+
+  /* color story */
+  --orange: #ff6b35;
+  --orange-soft: #ff8a5c;
+  --yellow: #f7c948;
+  --yellow-soft: #fde399;
+  --pink: #ffc1ad;
+  --pink-soft: #ffe1d5;
+  --teal: #2a9d8f;
+  --teal-soft: #b8d9d4;
+  --olive: #6b8e23;
+  --olive-soft: #c8d9a5;
+  --sky: #6ba8d4;
+  --sky-soft: #c8dfee;
+  --lilac: #b794d4;
+  --lilac-soft: #ddc8e8;
+
+  /* lines */
+  --line: #e8dec6;
+  --line-soft: #f0e8d6;
+
+  /* shadcn semantic tokens (kept for compatibility — mapped to warm palette) */
+  --background: var(--bg);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--bg);
+  --secondary: var(--bg-2);
+  --secondary-foreground: var(--ink);
+  --muted: var(--bg-2);
+  --muted-foreground: var(--mute);
+  --accent: var(--orange);
+  --accent-foreground: var(--paper);
+  --destructive: #c2261b;
+  --destructive-foreground: var(--paper);
+  --border: var(--ink);
+  --input: var(--line);
+  --ring: var(--orange);
+
+  --radius: 24px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-mute: var(--mute);
+  --color-paper: var(--paper);
+  --color-paper-cream: var(--paper-cream);
+
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
+  --color-yellow: var(--yellow);
+  --color-yellow-soft: var(--yellow-soft);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-teal: var(--teal);
+  --color-teal-soft: var(--teal-soft);
+  --color-olive: var(--olive);
+  --color-olive-soft: var(--olive-soft);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-lilac: var(--lilac);
+  --color-lilac-soft: var(--lilac-soft);
+
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --font-sans:
+    var(--font-geist-sans), -apple-system, "SF Pro Text", "Inter", sans-serif;
+  --font-display:
+    var(--font-geist-sans), -apple-system, "Inter Tight", "Söhne Breit",
+    sans-serif;
+  --font-serif: "Newsreader", "Iowan Old Style", "Georgia", serif;
+  --font-hand:
+    var(--font-caveat), var(--font-ma-shan-zheng), "Caveat", "Ma Shan Zheng",
+    "Bradley Hand", "STKaiti", cursive;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+  ::selection {
+    background: var(--yellow);
+    color: var(--ink);
+  }
+}
+
+/* ─── Reusable building blocks ──────────────────────────── */
+@layer components {
+  /* card with characteristic ink stroke + drop shadow */
+  .br-card {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 0 var(--ink);
+  }
+  .br-card-sm {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  /* pill (used by nav and filter chips) */
+  .br-pill {
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    border-radius: 9999px;
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .br-pill-flat {
+    border-radius: 9999px;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+  }
+  /* yellow highlight mark — used inside h1 */
+  .y-mark {
+    background: var(--yellow);
+    padding: 2px 14px 12px;
+    border-radius: 14px;
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+  /* orange faux-marker underline */
+  .underline-orange {
+    background: linear-gradient(
+      transparent 70%,
+      var(--orange) 70%,
+      var(--orange) 92%,
+      transparent 92%
+    );
+  }
+  /* small handwritten label */
+  .hand {
+    font-family: var(--font-hand);
+    color: var(--orange);
+  }
+  /* common label dot prefix used by .br-label. Dot color is set via the
+     `--dot` custom property — defaults to mute, override per-instance.   */
+  .br-label {
+    --dot: var(--mute);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .br-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dot);
+  }
+}

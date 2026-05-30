@@ -1,0 +1,329 @@
+{
+  "site": {
+    "name": "Asher",
+    "title": "Asher · 为网络做小而用心的事",
+    "description": "Asher 的个人站点。住在上海的设计师 & 工程师。作品、笔记、偶尔的碎碎念。"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "portfolio": "作品集",
+    "blog": "博客",
+    "resources": "资源",
+    "contact": "联系"
+  },
+  "footer": {
+    "built": "built with care · 上海 · {year}",
+    "seeYou": "再见 ✿"
+  },
+  "langSwitch": {
+    "label": "切换语言",
+    "zh": "中文",
+    "en": "English"
+  },
+  "common": {
+    "all": "全部",
+    "back": "返回",
+    "viewAll": "查看全部",
+    "readMore": "继续阅读",
+    "minRead": "{min} 分钟",
+    "fresh": "{count} 个新作",
+    "of": "{a} / {b}",
+    "filter": "筛选"
+  },
+  "home": {
+    "greeting": "你好 ✿ 请进来坐坐",
+    "headline1": "我做",
+    "headlineSmall": "小而",
+    "headlineHonest": "用心",
+    "headlineThings": "的东西",
+    "headlineForWeb": "服务于网络",
+    "introBold": "设计师 & 工程师",
+    "introTail": "，住在上海。这里是我的小角落，存放作品、半成品的想法，偶尔写写碎碎念。",
+    "ctaWork": "看看作品",
+    "ctaBlog": "读读博客",
+    "nowStatus": "在做 — 个人站 v2 & 又一次重写 about 页",
+    "bento": {
+      "portfolioLabel": "作品集",
+      "portfolioTitle": "做过的东西",
+      "portfolioDesc": "十二个项目，多数是 Web 和移动端。一些是产品，一些是当成代码发布的随笔。",
+      "portfolioFresh": "{count} 个新作",
+      "blogLabel": "博客 · {count} 篇",
+      "blogTitle": "博客 & 碎碎念",
+      "blogDesc": "建站杂记、Contentlayer 替换感想、还有一篇关于 icon button 的意见。",
+      "aboutLabel": "关于",
+      "aboutTitle": "你好，我是 Asher。",
+      "aboutDesc": "十年设计与发货经验。目前独立工作，偶尔接活。",
+      "resourcesLabel": "资源",
+      "resourcesTitle": "我用的工具",
+      "resourcesDesc": "Linear、Cursor、Figma —— 还有一份我会重读的书单。",
+      "contactLabel": "联系",
+      "contactTitle": "留个言",
+      "contactCadence": "通常 24h 内回复"
+    }
+  },
+  "about": {
+    "metaTitle": "关于",
+    "metaDescription": "关于 Asher",
+    "greeting": "关于我 ✿ 简短几句",
+    "headlinePart1": "我",
+    "headlineDesign": "设计 + 编程",
+    "headlineSmall": "做小而",
+    "headlineCareful": "用心",
+    "headlineThings": "的东西。",
+    "lede": "你好。我是 Asher —— 一个住在上海的设计师 & 工程师。过去十年默默地给网络做东西，这里是我整理 ",
+    "ledeEm": "学习笔记",
+    "ledeTail": " 的地方。",
+    "avatarRole": "设计师 + 工程师 · 上海",
+    "avatarTags": ["Web", "iOS", "品牌"],
+    "longerNote": "再多说\n几句 ↘",
+    "longerBody1": "我是写字出身。在搞懂 ",
+    "longerKerning": "字距",
+    "longerBody2": " 是什么、或会拼 ",
+    "longerTs": "TypeScript",
+    "longerBody3": " 之前，我就在纠结哪个段落断行更好看。这个本能留到了今天，只是媒介变了。",
+    "longerBody4": "现在我把时间一半留给客户项目（多数是设计系统和小型产品界面），另一半给自己发起的东西，就活在这里。我偏爱设计和工程都能亲手做的项目 —— 两者的接缝才是有趣决策的发生地。",
+    "timelineHead": "履历",
+    "timelineHand": "—— 简短一份",
+    "timelineMeta": "短堆叠",
+    "valuesHead": "我在乎的事",
+    "valuesHand": "—— 几条小信条",
+    "timeline": [
+      {
+        "when": "2024 — 现在",
+        "role": "独立工作",
+        "where": "设计 + 工程，主要做客户项目",
+        "note": "设计系统、产品界面、偶尔的品牌审计。最近合作过：两家初创公司，一家公共文化机构。"
+      },
+      {
+        "when": "2021 — 24",
+        "role": "高级产品设计师",
+        "where": "B 轮金融科技公司",
+        "note": "主导设计系统重建。iOS 消费端 App 从 v1 做到 v3。"
+      },
+      {
+        "when": "2017 — 21",
+        "role": "产品设计师",
+        "where": "B2B SaaS",
+        "note": "负责 Dashboard 和数据导出管道。写了很多 CSS。"
+      },
+      {
+        "when": "2014 — 17",
+        "role": "杂事",
+        "where": "自由职业、一所设计学校、一家糟糕的代理公司",
+        "note": "那几年，我搞清楚了哪些事再也不想做。"
+      }
+    ],
+    "values": [
+      {
+        "n": "01.",
+        "title": "诚实的占位。",
+        "body": "标了标签的灰色方块，比 *假数据* 更有用。少点装。"
+      },
+      {
+        "n": "02.",
+        "title": "一处 120% 用力。",
+        "body": "*其余 80%* 即可。品味是知道力气该花在哪。"
+      },
+      {
+        "n": "03.",
+        "title": "静态优先。",
+        "body": "除非证明必要。*大多数页面* 其实不需要交互。"
+      },
+      {
+        "n": "04.",
+        "title": "做完，本身就是功能。",
+        "body": "*先发布小东西*。然后再发下一个。"
+      }
+    ],
+    "ctaSentence": "目前接受新项目。如果该聊聊，请到 ",
+    "ctaLink": "联系页",
+    "ctaTail": " 留言。"
+  },
+  "portfolio": {
+    "metaTitle": "作品集",
+    "metaDescription": "我做过的东西的小目录。",
+    "greeting": "作品集 ✿ 2014—2026",
+    "headline1": "一份",
+    "headlineCatalogue": "小目录",
+    "headlineOf": "关于我",
+    "headlineMade": "做过的东西",
+    "lede": "{count} 个项目，按 ",
+    "ledeEm": "时间倒序",
+    "ledeTail": " 排列。一些是产品，一些是设计系统，一些是以代码形式发布的随笔。",
+    "filterLabel": "筛选",
+    "filterAll": "全部",
+    "filterCount": "{n} / {total} 个项目",
+    "kinds": {
+      "Web": "Web",
+      "App": "App",
+      "Brand & System": "品牌 & 系统",
+      "Writing": "写作"
+    },
+    "current": "进行中",
+    "archive": "归档中还有更多",
+    "archiveHand": "—— 我可以告诉你 ↘",
+    "ctaContact": "聊聊 →"
+  },
+  "blog": {
+    "metaTitle": "博客",
+    "metaDescription": "博客 & 碎碎念 —— 关于设计、工程、以及它们之间。",
+    "greeting": "博客 ✿ {count} 篇 & 还在写",
+    "headline1": "博客",
+    "headlineRants": "& 碎碎念。",
+    "lede": "关于设计、工程、以及 ",
+    "ledeEm": "它们之间",
+    "ledeTail": " 的笔记。多数短小，偶尔长篇，每篇至少改过三遍。",
+    "filterAll": "全部",
+    "rssHand": "→ RSS 订阅",
+    "featured": "★ 精选",
+    "readIt": "去读",
+    "freshlyBaked": "刚出炉 ↗",
+    "fromThePost": "— 摘自文章",
+    "emptyTitle": "这个分类还没有文章。",
+    "emptyBody": "试试 ",
+    "emptyLink": "全部文章",
+    "emptyTail": "，或者过段时间再来。"
+  },
+  "post": {
+    "featured": "★ 精选",
+    "byline": "作者",
+    "tagged": "标签",
+    "wordsAt": "{min} 分钟 @ 200wpm",
+    "postedBy": "作者：",
+    "contentsHand": "目录 ↘",
+    "noContents": "（一气读完）",
+    "nextPostHand": "下一篇 ↘",
+    "keepReading": "继续读",
+    "marginPullAttribution": "—— 个人座右铭"
+  },
+  "project": {
+    "allProjects": "← 全部作品",
+    "featured": "★ 精选",
+    "visit": "访问",
+    "source": "源码",
+    "onTheBench": "正在做的 ↘",
+    "onTheBenchBody": "案例特意写得短。想看长版？发邮件给我 —— 我会告诉你哪些没成。",
+    "kind": "类别",
+    "role": "角色",
+    "year": "年份"
+  },
+  "resources": {
+    "metaTitle": "资源",
+    "metaDescription": "我读的、用的、悄悄推荐的东西。",
+    "greeting": "资源 ✿ 一个小集子",
+    "headline1": "我",
+    "headlineRead": "读的、",
+    "headlineUseRec": "用的、",
+    "headlineRecommend": "推荐",
+    "headlineThe": "的。",
+    "lede": "一份工作清单：塑造我思考方式的工具、书、和人。",
+    "ledeEm": "什么东西配得上，再加。",
+    "sectionTools": "工具",
+    "sectionToolsBlurb": "少了它们我会更难过的东西",
+    "sectionBooks": "书",
+    "sectionBooksBlurb": "我会重读的书，不是先读完的那种",
+    "sectionEssays": "文章 & 人物",
+    "sectionEssaysBlurb": "收藏、重读、饭桌上推荐",
+    "tools": [
+      {
+        "name": "Linear",
+        "kicker": "项目管理",
+        "reason": "尊重键盘用户。涨价了，但仍然值得。"
+      },
+      {
+        "name": "Cursor",
+        "kicker": "代码编辑器",
+        "reason": "现在我大部分代码都在这里写。AI 是真的好用。"
+      },
+      {
+        "name": "Figma",
+        "kicker": "设计",
+        "reason": "没有真正的对手。连 Dev Mode 都站住了脚。"
+      },
+      {
+        "name": "Velite",
+        "kicker": "内容层",
+        "reason": "类型安全的 MDX，没有 Contentlayer 的折腾。这站就靠它。"
+      }
+    ],
+    "books": [
+      {
+        "name": "白",
+        "kicker": "原研哉",
+        "reason": "我读过的最清晰的「克制」论。慢慢读 —— 一百页，要慢慢消化。"
+      },
+      {
+        "name": "Grid Systems",
+        "kicker": "Müller-Brockmann",
+        "reason": "圣经。修辞略过，盯着图看。"
+      },
+      {
+        "name": "Refactoring UI",
+        "kicker": "Wathan & Schoger",
+        "reason": "实用、中年、不啰嗦。给做设计的工程师。"
+      },
+      {
+        "name": "建筑模式语言",
+        "kicker": "Christopher Alexander",
+        "reason": "讲建筑，但什么都讲。建筑师、设计师、规划师都该读。"
+      }
+    ],
+    "essays": [
+      {
+        "name": "Worse Is Better",
+        "kicker": "Richard P. Gabriel",
+        "reason": "「先发布」的原始论证。痛、但仍然对。"
+      },
+      {
+        "name": "Why Generative Art Is Hard",
+        "kicker": "Tyler Hobbs",
+        "reason": "一位在做的艺术家对「为何看着容易其实不容易」的诚实交待。"
+      },
+      {
+        "name": "Rauno Freiberg",
+        "kicker": "Vercel 设计师",
+        "reason": "看他的实验性 hero、精准的交互、和给设计师同行的暗号。"
+      },
+      {
+        "name": "原研哉",
+        "kicker": "无印良品艺术总监",
+        "reason": "「克制是哲学，不是没用力」的案例。"
+      }
+    ]
+  },
+  "contact": {
+    "metaTitle": "联系",
+    "metaDescription": "联系 Asher",
+    "greeting": "联系 ✿ 大门常开",
+    "headline1": "给我",
+    "headlineLine": "留个言。",
+    "lede": "我什么都看。",
+    "ledeEm": "最快",
+    "ledeTail": " 是邮件 —— 其余渠道我看得没那么勤。",
+    "primary": "★ 主要",
+    "email": "邮件",
+    "emailBody": "主要渠道。写清楚标题，我通常一个工作日内回。",
+    "emailBodyEm": "欢迎长邮件。",
+    "emailCadence": "约 24h 回复",
+    "twitter": "Twitter / X",
+    "twitterBody": "半成型的想法和偶尔的设计吐槽。",
+    "twitterBodyEm": "私信开放",
+    "twitterTail": "，但我比较慢。",
+    "twitterCadence": "回复不定",
+    "github": "GitHub",
+    "githubBody": "大多数代码住在这里。",
+    "githubBodyEm": "Issues 和 PR",
+    "githubTail": " 是开源的爱情语言。",
+    "githubCadence": "约两天",
+    "linkedin": "LinkedIn",
+    "linkedinBody": "那种 *本该是邮件* 的消息。我 ",
+    "linkedinBodyEm": "周三",
+    "linkedinTail": " 才看。",
+    "linkedinCadence": "每周一次",
+    "promiseHand": "一个小承诺 ↘",
+    "promise1": "如果你写来，",
+    "promiseEm": "我会回。",
+    "promise2": " 可能是一天，可能是一周。但收件箱从不是黑洞，门从未关上。"
+  }
+}

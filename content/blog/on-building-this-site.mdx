@@ -1,0 +1,44 @@
+---
+title: On building this site — and the things I'm glad I cut
+description: I wanted a personal site that was fast to publish to and fast to load — in that order. The stack, the decisions, and a small confession about analytics.
+date: 2026-05-30
+category: 随笔
+tags:
+  - meta
+  - nextjs
+  - tailwind
+published: true
+featured: true
+readingMinutes: 9
+pullQuote: "Anything you can't reach during your build is a runtime dependency in disguise."
+---
+
+I wanted a personal site that was **fast to publish to** and **fast to load** —
+in that order. Here&apos;s the stack I landed on.
+
+## The stack
+
+- **Next.js 15** (App Router) for routing, SSG, and image optimization
+- **Tailwind v4** for styles, with CSS variables for theming
+- **shadcn/ui** for a small set of unstyled-but-polished primitives
+- **Velite** for typed MDX content
+- **next-themes** for dark mode
+- **Vercel** for deploys
+
+## Why MDX over a CMS
+
+A CMS is overkill for a one-author site. MDX gives me:
+
+1. Version control on content
+2. The ability to embed React components in posts
+3. Zero login flow when I want to publish
+
+If I ever need a collaborator UI, I can layer a CMS on top later.
+
+## What I&apos;m not doing
+
+- No client-side routing libraries — Next handles it.
+- No state management — React Server Components carry most of the weight.
+- No analytics on day one — adding Vercel Analytics later is one line.
+
+Done is better than perfect. Ship.

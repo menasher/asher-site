@@ -1,0 +1,37 @@
+---
+title: A week with Tailwind v4
+description: What @theme inline got right, what @plugin stumbled on, and one weird CSS variable surprise.
+date: 2026-05-12
+category: 学习笔记
+tags:
+  - tailwind
+  - css
+published: true
+readingMinutes: 5
+---
+
+## What I love
+
+`@theme inline` plus CSS variables is the right model. You declare design
+tokens once, in CSS, and Tailwind generates utility classes from them. No
+`tailwind.config.ts` to babysit.
+
+## What stumbled
+
+`@plugin "tw-animate-css"` failed for me — the package only exposes a
+`style` condition in its `exports` field, and Tailwind&apos;s plugin loader
+wants `node`/`require`. The fix was to use a plain `@import` instead:
+
+```css
+@import "tw-animate-css";
+```
+
+## One weird thing
+
+If you reference a CSS variable inside another variable&apos;s value and that
+variable doesn&apos;t exist, the parser silently falls back. I had a self-reference
+loop in `--font-hand: var(--font-hand), "Caveat", cursive` and the browser
+just dropped the rule.
+
+Lesson: never name a variable the same as the next/font variable you&apos;re trying
+to reference. Use a stack name like `--font-hand-stack`.

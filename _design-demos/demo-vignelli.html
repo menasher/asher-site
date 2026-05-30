@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo A · Vignelli Information Architecture</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --ink: #000000;
+        --rule: #000000;
+        --accent: #bb2121;
+        --grid-gap: 24px;
+        --col: calc((100% - 11 * var(--grid-gap)) / 12);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-weight: 350;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+        font-feature-settings: "ss01", "cv01";
+      }
+      .page {
+        width: 1280px;
+        min-height: 1600px;
+        padding: 0;
+      }
+      /* GRID UTIL */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--grid-gap);
+      }
+      /* HEADER */
+      header {
+        border-bottom: 2px solid var(--rule);
+        padding: 24px 48px;
+      }
+      header .row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+      .logotype {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .logotype::after {
+        content: "®";
+        font-size: 10px;
+        vertical-align: super;
+        margin-left: 2px;
+        opacity: 0.6;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 32px;
+      }
+      nav a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+      }
+      nav a.active {
+        color: var(--accent);
+      }
+      /* HERO */
+      .hero {
+        padding: 96px 48px 64px;
+      }
+      .hero .label {
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--accent);
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .hero .label::before {
+        content: "";
+        display: inline-block;
+        width: 36px;
+        height: 1px;
+        background: var(--accent);
+      }
+      .hero h1 {
+        grid-column: 1 / span 11;
+        font-size: 96px;
+        line-height: 0.95;
+        letter-spacing: -0.035em;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      .hero h1 .accent {
+        color: var(--accent);
+      }
+      .hero .meta {
+        grid-column: 1 / span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--grid-gap);
+        margin-top: 64px;
+        padding-top: 24px;
+        border-top: 1px solid var(--rule);
+      }
+      .hero .meta dt {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink);
+        opacity: 0.5;
+        margin-bottom: 8px;
+      }
+      .hero .meta dd {
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .hero .meta .m-1 { grid-column: 1 / span 3; }
+      .hero .meta .m-2 { grid-column: 4 / span 3; }
+      .hero .meta .m-3 { grid-column: 7 / span 3; }
+      .hero .meta .m-4 { grid-column: 10 / span 3; }
+
+      /* PORTFOLIO */
+      .work {
+        padding: 80px 48px 96px;
+        border-top: 2px solid var(--rule);
+      }
+      .work .section-head {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--grid-gap);
+        align-items: baseline;
+        margin-bottom: 48px;
+      }
+      .work .section-head h2 {
+        grid-column: 1 / span 8;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 600;
+      }
+      .work .section-head .index {
+        grid-column: 11 / span 2;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 500;
+        text-align: right;
+        opacity: 0.6;
+      }
+      .work .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: var(--grid-gap);
+        padding: 28px 0;
+        border-top: 1px solid var(--rule);
+        align-items: baseline;
+      }
+      .work .row:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+      .work .num {
+        grid-column: 1 / span 1;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .work .title {
+        grid-column: 2 / span 4;
+        font-size: 28px;
+        letter-spacing: -0.015em;
+        font-weight: 500;
+      }
+      .work .desc {
+        grid-column: 6 / span 4;
+        font-size: 13px;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+      .work .tags {
+        grid-column: 10 / span 2;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+      }
+      .work .year {
+        grid-column: 12 / span 1;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+        text-align: right;
+      }
+
+      /* FOOTNOTE */
+      .footnote {
+        padding: 32px 48px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 500;
+      }
+      .footnote .red {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="row">
+          <div class="logotype">ASHER</div>
+          <nav>
+            <ul>
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="label">Vol. 1 · 2026 / Edition One</div>
+        <div class="grid">
+          <h1>
+            Designer, engineer,<br />
+            and occasional writer.<br />
+            <span class="accent">Currently shipping</span><br />
+            for the web.
+          </h1>
+        </div>
+        <dl class="meta">
+          <div class="m-1">
+            <dt>Based</dt>
+            <dd>Shanghai, CN (UTC+8)</dd>
+          </div>
+          <div class="m-2">
+            <dt>Available</dt>
+            <dd>Open to new work</dd>
+          </div>
+          <div class="m-3">
+            <dt>Working on</dt>
+            <dd>Personal site v2 / Design system audit</dd>
+          </div>
+          <div class="m-4">
+            <dt>Reach</dt>
+            <dd>hi@asher.com</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="work">
+        <div class="section-head">
+          <h2>Selected Work</h2>
+          <div class="index">03 / 12 ↓</div>
+        </div>
+
+        <div class="row">
+          <div class="num">01</div>
+          <div class="title">Personal Site v2</div>
+          <div class="desc">
+            A minimal portfolio + blog built on Next.js 16, Tailwind v4, and
+            MDX. Static, dark-mode, sub-1s TTFB.
+          </div>
+          <div class="tags">Web · Self</div>
+          <div class="year">2026</div>
+        </div>
+
+        <div class="row">
+          <div class="num">02</div>
+          <div class="title">Sleek Mobile App</div>
+          <div class="desc">
+            iOS productivity tool. Owned design and full-stack delivery.
+            App Store: 4.8 stars, 12k installs.
+          </div>
+          <div class="tags">App · Client</div>
+          <div class="year">2025</div>
+        </div>
+
+        <div class="row">
+          <div class="num">03</div>
+          <div class="title">Design System Audit</div>
+          <div class="desc">
+            Reconciled a 240-token Figma library with the production codebase.
+            Cut UI bugs reported per sprint by 47%.
+          </div>
+          <div class="tags">Brand · Consulting</div>
+          <div class="year">2025</div>
+        </div>
+      </section>
+
+      <div class="footnote">
+        <div>© ASHER · 2026 · All rights reserved</div>
+        <div class="red">View all 12 projects →</div>
+      </div>
+    </div>
+  </body>
+</html>
